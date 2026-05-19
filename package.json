@@ -1,5 +1,5 @@
 {
-  "name": "loghue",
+  "name": "logaura",
   "version": "1.0.2",
   "description": "Lightweight zero-dependency patch for colored, timestamped console output",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "node test.js"
   },
   "keywords": [
-    "loghue",
+    "logaura",
     "console",
     "logger",
     "logging",
@@ -20,12 +20,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hamzamanzoor8234/loghue.git"
+    "url": "git+https://github.com/hamzamanzoor8234/logaura.git"
   },
   "bugs": {
-    "url": "https://github.com/hamzamanzoor8234/loghue/issues"
+    "url": "https://github.com/hamzamanzoor8234/logaura/issues"
   },
-  "homepage": "https://github.com/hamzamanzoor8234/loghue#readme",
+  "homepage": "https://github.com/hamzamanzoor8234/logaura#readme",
   "files": [
     "index.js",
     "README.md"

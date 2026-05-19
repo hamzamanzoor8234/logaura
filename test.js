@@ -1,11 +1,11 @@
 'use strict';
 
-const { initLoghue } = require('./index');
+const { initLogaura } = require('./index');
 
 // --- Default configuration demo ---
-console.log('=== loghue: default config ===\n');
+console.log('=== logaura: default config ===\n');
 
-initLoghue();
+initLogaura();
 
 console.log('Application started successfully');
 console.warn('Deprecated API in use');
@@ -18,13 +18,13 @@ console.log('Done. You should see cyan timestamps and green/yellow/red level tag
 //
 // No timestamps — level tags only:
 //
-// initLoghue({ includeTimestamp: false });
+// initLogaura({ includeTimestamp: false });
 // console.log('Info without timestamp');
 // console.warn('Warning without timestamp');
 // console.error('Error without timestamp');
 //
 // 12-hour clock:
 //
-// initLoghue({ timeFormat: '12h' });
+// initLogaura({ timeFormat: '12h' });
 // console.log('Timestamp in 12h format');
 // console.warn('Check AM/PM in the cyan timestamp');

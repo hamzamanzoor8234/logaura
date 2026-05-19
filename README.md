@@ -1,4 +1,4 @@
-# loghue
+# logaura
 
 A lightweight, zero-dependency npm package that patches the global `console` with colored log levels and timestamps.
 
@@ -13,7 +13,7 @@ A lightweight, zero-dependency npm package that patches the global `console` wit
 ## Installation
 
 ```bash
-npm install loghue
+npm install logaura
 ```
 
 For local development in this repo:
@@ -24,12 +24,12 @@ npm link
 
 ## Quick Start
 
-Call `initLoghue()` once at application startup. Every `console` call after that gets a formatted prefix.
+Call `initLogaura()` once at application startup. Every `console` call after that gets a formatted prefix.
 
 ```js
-const { initLoghue } = require('loghue');
+const { initLogaura } = require('logaura');
 
-initLoghue();
+initLogaura();
 
 console.log('Server started on port 3000');
 console.warn('Memory usage is high');
@@ -54,9 +54,9 @@ Example output (colors shown in supported terminals):
 ### Turn off timestamps
 
 ```js
-const { initLoghue } = require('loghue');
+const { initLogaura } = require('logaura');
 
-initLoghue({ includeTimestamp: false });
+initLogaura({ includeTimestamp: false });
 
 console.log('No timestamp, still colored [INFO] tag');
 ```
@@ -64,7 +64,7 @@ console.log('No timestamp, still colored [INFO] tag');
 ### Use 12-hour time
 
 ```js
-initLoghue({ timeFormat: '12h' });
+initLogaura({ timeFormat: '12h' });
 
 console.log('Timestamp uses AM/PM');
 ```
@@ -72,7 +72,7 @@ console.log('Timestamp uses AM/PM');
 ### Combine options
 
 ```js
-initLoghue({
+initLogaura({
   includeTimestamp: true,
   timeFormat: '12h',
 });
@@ -85,10 +85,10 @@ GitHub Actions publishes to npm using a granular access token stored as a reposi
 ### One-time setup
 
 1. Create a **Granular Access Token** at [npm tokens](https://www.npmjs.com/settings/hamzamanzoor/tokens):
-   - **Packages:** Read and write (scope to `loghue`)
+   - **Packages:** Read and write (scope to `logaura`)
    - Enable **Bypass 2FA** for automation
 2. Add the token as a **Repository secret** (not Dependabot or Codespaces):
-   - Open [Actions secrets for this repo](https://github.com/hamzamanzoor8234/loghue/settings/secrets/actions)
+   - Open [Actions secrets for this repo](https://github.com/hamzamanzoor8234/logaura/settings/secrets/actions)
    - **New repository secret**
    - Name: `NPM_TOKEN` (exact name; or `NPM_ACCESS_TOKEN`)
    - Value: paste the full `npm_...` token once (you cannot view it again)
@@ -109,7 +109,7 @@ The workflow runs `npm test` then `npm publish`.
 
 ## Repository
 
-[github.com/hamzamanzoor8234/loghue](https://github.com/hamzamanzoor8234/loghue)
+[github.com/hamzamanzoor8234/logaura](https://github.com/hamzamanzoor8234/logaura)
 
 ## License
 

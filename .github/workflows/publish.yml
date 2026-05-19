@@ -17,8 +17,8 @@ jobs:
           if [ -z "$NODE_AUTH_TOKEN" ]; then
             echo "::error::No npm token found. Add a Repository secret named NPM_TOKEN (recommended) or NPM_ACCESS_TOKEN."
             echo "::error::GitHub → Settings → Secrets and variables → Actions → New repository secret"
-            echo "::error::https://github.com/hamzamanzoor8234/loghue/settings/secrets/actions"
-            echo "::error::Token: npm granular, Read+Write on loghue, Bypass 2FA enabled."
+            echo "::error::https://github.com/hamzamanzoor8234/logaura/settings/secrets/actions"
+            echo "::error::Token: npm granular, Read+Write on logaura, Bypass 2FA enabled."
             exit 1
           fi
 

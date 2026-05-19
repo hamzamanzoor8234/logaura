@@ -68,7 +68,7 @@ function formatPrefix(level, config) {
   return prefix;
 }
 
-function initLoghue(config = {}) {
+function initLogaura(config = {}) {
   currentConfig = mergeConfig(config);
 
   if (!patched) {
@@ -92,4 +92,4 @@ function initLoghue(config = {}) {
   }
 }
 
-module.exports = { initLoghue };
+module.exports = { initLogaura };
