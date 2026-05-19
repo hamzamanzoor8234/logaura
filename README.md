@@ -78,6 +78,29 @@ initLoghue({
 });
 ```
 
+## Publishing (CI/CD)
+
+GitHub Actions publishes to npm using a granular access token stored as a repository secret.
+
+### One-time setup
+
+1. Create a **Granular Access Token** at [npm tokens](https://www.npmjs.com/settings/hamzamanzoor/tokens):
+   - **Packages:** Read and write (scope to `loghue`)
+   - Enable **Bypass 2FA** for automation
+2. In GitHub: **Repository → Settings → Secrets and variables → Actions → New repository secret**
+   - Name: `NPM_TOKEN`
+   - Value: your `npm_...` token
+
+### Publish a new version
+
+1. Bump `"version"` in `package.json` (must be higher than the version on npm).
+2. Commit and push to `main`.
+3. Either:
+   - **Tag push:** `git tag v1.0.3` then `git push origin v1.0.3`, or
+   - **Manual:** GitHub → **Actions** → **Publish to npm** → **Run workflow**
+
+The workflow runs `npm test` then `npm publish`.
+
 ## Repository
 
 [github.com/hamzamanzoor8234/loghue](https://github.com/hamzamanzoor8234/loghue)

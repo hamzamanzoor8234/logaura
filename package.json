@@ -1,6 +1,6 @@
 {
   "name": "loghue",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Lightweight zero-dependency patch for colored, timestamped console output",
   "main": "index.js",
   "scripts": {
