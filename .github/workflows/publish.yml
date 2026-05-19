@@ -10,12 +10,15 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     env:
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN || secrets.NPM_ACCESS_TOKEN }}
     steps:
-      - name: Verify NPM_TOKEN secret
+      - name: Verify npm auth secret
         run: |
           if [ -z "$NODE_AUTH_TOKEN" ]; then
-            echo "::error::Add repository secret NPM_TOKEN (granular npm token with publish + bypass 2FA)."
+            echo "::error::No npm token found. Add a Repository secret named NPM_TOKEN (recommended) or NPM_ACCESS_TOKEN."
+            echo "::error::GitHub → Settings → Secrets and variables → Actions → New repository secret"
+            echo "::error::https://github.com/hamzamanzoor8234/loghue/settings/secrets/actions"
+            echo "::error::Token: npm granular, Read+Write on loghue, Bypass 2FA enabled."
             exit 1
           fi
 

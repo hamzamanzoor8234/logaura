@@ -87,9 +87,15 @@ GitHub Actions publishes to npm using a granular access token stored as a reposi
 1. Create a **Granular Access Token** at [npm tokens](https://www.npmjs.com/settings/hamzamanzoor/tokens):
    - **Packages:** Read and write (scope to `loghue`)
    - Enable **Bypass 2FA** for automation
-2. In GitHub: **Repository → Settings → Secrets and variables → Actions → New repository secret**
-   - Name: `NPM_TOKEN`
-   - Value: your `npm_...` token
+2. Add the token as a **Repository secret** (not Dependabot or Codespaces):
+   - Open [Actions secrets for this repo](https://github.com/hamzamanzoor8234/loghue/settings/secrets/actions)
+   - **New repository secret**
+   - Name: `NPM_TOKEN` (exact name; or `NPM_ACCESS_TOKEN`)
+   - Value: paste the full `npm_...` token once (you cannot view it again)
+
+3. Push the workflow file to `main`, then re-run **Publish to npm**.
+
+**If the workflow fails with “No npm token found”:** the secret is missing, misnamed, or was added under the wrong tab. Create `NPM_TOKEN` under **Actions** secrets and re-run the job (secrets are not applied to runs that started before the secret existed).
 
 ### Publish a new version
 
