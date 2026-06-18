@@ -31,5 +31,8 @@ jobs:
 
       - run: npm test
 
+      - name: Verify npm credentials
+        run: npm whoami
+
       - name: Publish package
         run: npm publish
