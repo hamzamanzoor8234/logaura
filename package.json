@@ -1,8 +1,9 @@
 {
   "name": "logaura",
-  "version": "1.0.8",
-  "description": "Lightweight zero-dependency patch for colored, timestamped console output",
+  "version": "1.0.9",
+  "description": "Lightweight, zero-dependency global console patcher to inject beautiful, colored ANSI styles and timestamps (INFO, WARN, ERROR) into your existing application log output.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "node test.js"
   },
@@ -14,7 +15,16 @@
     "ansi",
     "colors",
     "timestamp",
-    "zero-dependencies"
+    "zero-dependencies",
+    "chalk",
+    "kleur",
+    "color-logger",
+    "timestamped-logger",
+    "pretty-console",
+    "global-logger",
+    "terminal-colors",
+    "logger-timestamp",
+    "console-override"
   ],
   "author": "hamzamanzoor <hamzamanzoor8234@gmail.com>",
   "license": "MIT",
@@ -28,6 +38,7 @@
   "homepage": "https://github.com/hamzamanzoor8234/logaura#readme",
   "files": [
     "index.js",
+    "index.d.ts",
     "README.md"
   ],
   "engines": {
